@@ -1,0 +1,3 @@
+# Put user section options in global ~/.gitconfig, i.e.
+# touch ~/.gitconfig && git config --global user.email "email@example.com"
+# touch ~/.gitconfig && git config --global user.name "Mona Lisa"
