@@ -61,6 +61,11 @@
 ;; (remove-all-keys)
 ;; (debug)
 
+;;;;; Bindings
+
+;; Control + Space
+(xbindkey '(control space) "xset r off; xte 'keyup space'; xte 'keydown Shift_L' 'key space' 'keyup Shift_L'; xset r on" )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; End of xbindkeys guile configuration ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
