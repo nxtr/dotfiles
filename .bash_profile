@@ -1,5 +1,7 @@
 # ~/.bash_profile: executed by bash(1) for login shells.
 
+export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+
 # Wrap xiwi so that aliases work
 xiwi() {
     local xiwiargs=''
