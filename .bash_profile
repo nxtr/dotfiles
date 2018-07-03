@@ -2,6 +2,8 @@
 
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 
+eval $(keychain --eval --quiet)
+
 # Wrap xiwi so that aliases work
 xiwi() {
     local xiwiargs=''
