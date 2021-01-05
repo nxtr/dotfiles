@@ -1,1 +1,4 @@
 # Put user section options in global ~/.gitconfig
+
+[init]
+	defaultBranch = main
