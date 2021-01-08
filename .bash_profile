@@ -3,8 +3,11 @@
 # Load keys and re-use ssh-agent and/or gpg-agent between logins
 eval $(keychain --eval --quiet)
 
-# Set GPG TTY
-export GPG_TTY=$(tty)
+# If stdin is a TTY
+if [ -t 0 ]; then       # check for a terminal
+    # Set GPG TTY
+    export GPG_TTY=$(tty)
+fi
 
 # Refresh gpg-agent tty in case user switches into an X session
 gpg-connect-agent --quiet updatestartuptty /bye >/dev/null
