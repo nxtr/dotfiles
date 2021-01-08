@@ -7,7 +7,10 @@
 # For documentation, see:
 # https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/vm_tools/sommelier/
 
-# Example: Set default X resources at startup.
-#if [ -f ~/.Xresources ]; then
-#  xrdb -merge ~/.Xresources
-#fi
+# Import environment from ~/.bash_profile and ~/.profile
+env -i $(systemctl --user show-environment) bash --norc -l -c 'systemctl --user import-environment $(compgen -e)'
+
+# Set default X resources at startup.
+if [ -f ~/.Xresources ]; then
+  xrdb -merge ~/.Xresources
+fi
