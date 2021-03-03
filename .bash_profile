@@ -16,6 +16,10 @@ if [ -f /usr/bin/javac ]; then
     export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 fi
 
+if [ -d "$HOME/.cask/bin" ] ; then
+    PATH="$HOME/.cask/bin:$PATH"
+fi
+
 # At end, read ~/.profile
 if [ -f $HOME/.profile ]; then
     . $HOME/.profile
