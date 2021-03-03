@@ -118,3 +118,7 @@ if [[ "$INSIDE_EMACS" = 'vterm' ]] \
     && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh ]]; then
     source ${EMACS_VTERM_PATH}/etc/emacs-vterm-bash.sh
 fi
+
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -t"                  # $EDITOR opens in terminal
+export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
