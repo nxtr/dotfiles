@@ -16,6 +16,11 @@ if [ -f /usr/bin/javac ]; then
     export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 fi
 
+export GDK_SCALE=1
+export GDK_SCALE_DPI=192
+export SCALE=1
+export SOMMELIER_ACCELERATORS="Super_L,<Alt>bracketleft,<Alt>bracketright,<Alt>minus,<Alt>equal"
+
 # At end, read ~/.profile
 if [ -f $HOME/.profile ]; then
     . $HOME/.profile
