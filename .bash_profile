@@ -20,6 +20,11 @@ if [ -d "$HOME/.cask/bin" ] ; then
     PATH="$HOME/.cask/bin:$PATH"
 fi
 
+export GDK_SCALE=1
+export GDK_SCALE_DPI=192
+export SCALE=1
+export SOMMELIER_ACCELERATORS="Super_L,<Alt>bracketleft,<Alt>bracketright,<Alt>minus,<Alt>equal"
+
 # At end, read ~/.profile
 if [ -f $HOME/.profile ]; then
     . $HOME/.profile
