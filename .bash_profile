@@ -1,4 +1,4 @@
-# ~/.bash_profile: executed by bash(1) for login shells.
+# /etc/skel/.bash_profile
 
 # Load keys and re-use ssh-agent and/or gpg-agent between logins
 eval $(keychain --eval --quiet)
