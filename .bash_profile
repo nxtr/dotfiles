@@ -20,6 +20,8 @@ if [ -d "$HOME/.cask/bin" ] ; then
     PATH="$HOME/.cask/bin:$PATH"
 fi
 
+sudo mount -i -o remount,exec /home/chronos/user
+
 # This file is sourced by bash for login shells.  The following line
 # runs your .bashrc and is recommended by the bash info pages.
 if [[ -f ~/.bashrc ]] ; then
