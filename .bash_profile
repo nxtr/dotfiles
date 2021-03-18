@@ -16,6 +16,8 @@ if [ -f /usr/bin/javac ]; then
     export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 fi
 
+sudo mount -i -o remount,exec /home/chronos/user
+
 # This file is sourced by bash for login shells.  The following line
 # runs your .bashrc and is recommended by the bash info pages.
 if [[ -f ~/.bashrc ]] ; then
