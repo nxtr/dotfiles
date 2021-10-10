@@ -123,5 +123,17 @@ export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"                  # $EDITOR opens in terminal
 export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+# wsdl
+export DISPLAY=:0
+
+if ! pgrep wsld >> /dev/null 2>&1 ; then
+    nohup wsld > /dev/null < /dev/null 2>&1 &
+    disown
+
+    # sleep until $DISPLAY is up
+    while ! xset q > /dev/null 2>&1 ; do
+        sleep 0.3
+    done
+fi
+
 export LIBGL_ALWAYS_INDIRECT=1
