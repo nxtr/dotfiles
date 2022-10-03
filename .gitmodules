@@ -1,3 +1,6 @@
 [submodule ".config/sway"]
 	path = .config/sway
 	url = git@github.com:nxtr/dotfiles-sway.git
+[submodule ".config/kanshi"]
+	path = .config/kanshi
+	url = git@github.com:nxtr/dotfiles-kanshi.git
