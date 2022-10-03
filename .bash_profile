@@ -20,3 +20,6 @@ fi
 if [ -f $HOME/.profile ]; then
     . $HOME/.profile
 fi
+
+# If running from tty1 start sway
+[ "$(tty)" = "/dev/tty1" ] && exec sway
